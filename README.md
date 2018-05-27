@@ -5,13 +5,14 @@ CTF近いから始まる前に読まないとなあと思ったら今日2018/05/
 
 [作中のコード群はここ](https://github.com/satoru-takeuchi/linux-in-practice)
 
-
 ```
-docker run -ti --privileged ubuntu /bin/bash
+git clone https://github.com/say3no/try_linux
+cd try_linux
+docker run -ti --privileged -v `pwd`/codes:/codes say3no/try_linux /bin/bash
 ```
 
-以下のパッケージを使うよ。作中の推奨環境は実機でubuntsuだけどdockerでやります
- - binutils 
- - build-essential
- - sysstat
+
+
+
+
 
