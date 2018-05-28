@@ -17,6 +17,7 @@ int main(){
   pid_t ret;
   ret = fork(); // 復帰時に親プロセスには子プロセスのプロセスIDを、子プロセスには0を返す。
   if ( ret == -1) err(EXIT_FAILURE, "fork() failed");
+
   if ( ret == 0) {
     // child process came here because fork() returns 0 for child process
     child();
@@ -24,6 +25,7 @@ int main(){
     // parent process came here because fork() returns the pid of newly created child process (>1)
     parent(ret);
   }
+  printf("hogehgoe passed \n");
     // shouldn't reach here
   err(EXIT_FAILURE, "shouldn't reach here");
 }
